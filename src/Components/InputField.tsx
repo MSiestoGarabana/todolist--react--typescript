@@ -1,4 +1,4 @@
-import React, { SetStateAction, useRef } from 'react'
+import React, {  useRef } from 'react'
 import './componentStyles.css'
 
 interface Props {
