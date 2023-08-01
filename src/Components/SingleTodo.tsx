@@ -11,8 +11,12 @@ type Props = {
 }
 
 const SingleTodo = ({todo, todoList, setTodoList}: Props) => {
+  
   const handleDone = (id: number) => {
     setTodoList(todoList.map((todo) => todo.id === id?{...todo, isDone: !todo.isDone } : todo))
+  }
+  const handleDelete = (id: number) => {
+    setTodoList(todoList.filter((todo) => todo.id !== id));
   }
   
   return <form className='todos__single'>
@@ -29,7 +33,7 @@ const SingleTodo = ({todo, todoList, setTodoList}: Props) => {
           <span className='icon'>
             <AiFillEdit/>
           </span>
-          <span className='icon'>
+          <span className='icon' onClick={()=> handleDelete(todo.id)}>
             <AiFillDelete/>
           </span>
           <span className='icon' onClick={()=> handleDone(todo.id)}>
