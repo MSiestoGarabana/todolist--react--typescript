@@ -19,9 +19,9 @@ const TodoList: React.FC<Props> = ({
   return (
     <div className="container">
       <Droppable droppableId="TodoList">
-        {(provided) => (
+        {(provided, snapshot) => (
           <div
-            className="todos"
+            className={`todos`}
             ref={provided.innerRef}
             {...provided.droppableProps}
           >
