@@ -54,7 +54,7 @@ const App: React.FC = () => {
   return (
     <DragDropContext onDragEnd={onDragEnd}>
       <div className="App">
-        <span className="heading">Taskify</span>
+        <span className="heading">To Do List</span>
         <InputField
           todo={todo}
           setTodo={setTodo}
